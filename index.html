@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type ="text/css" rel="stylesheet" href="styles.css">
+    <title>Giants Batting Statistics 2020</title>
+</head>
+<body>
+    <header>
+        <h1 id='title'>Giants Stats 2020</h1>
+    </header>
+    <section class='selection'>
+        <form  name='selection-form'>
+        <fieldset>
+            <legend>Select Players</legend>
+            <input type="radio"  name='select' id ='all' value='yes' checked >All Players<br>
+            
+            <input type="radio"  name='select' id='select' value='no'>Select Players<br>
+            
+            <input id='submit' type="submit" value='submit now' >            
+        </fieldset>
+        </form>
+    </section>
+
+
+    
+    <section class="wrapper">
+       
+        <form name='player-list'>
+            <fieldset>
+                <legend>Find Players</legend>
+                <input type="checkbox" name='player-names'id='Donovan Solano' value='1'>
+                <label for="Donovan Solano">Donovan Solano</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Brandon Crawford' value='2'>
+                <label for="Brandon Crawford">Brandon Crawford</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Longoria' value='3'>
+                <label for="Longoria">Evan Longoria</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Alex Dickerson' value='4'>
+                <label for="Alex Dickerson">Alex Dickerson</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Mauricio Dubon' value='5'>
+                <label for="Mauricio Dubon">Mauricio Dubon</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Mike Yastrzemski' value='6'>
+                <label for="Mike Yastrzemski">Mike Yastrzemski</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Wilmer Flores' value='7'>
+                <label for="Wilmer Flores">Wilmer Flores</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Austin Slater' value='8'>
+                <label for="Austin Slater">Austin Slater</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Darin Ruf' value='9'>
+                <label for="Darin Ruf">Darin Ruf</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Pablo Sandoval' value='10'>
+                <label for="Pablo Sandoval">Pablo Sandoval</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Chadwick Tromp' value='11'>
+                <label for="Chadwick Tromp">Chadwick Tromp</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Hunter Pence' value='12'>
+                <label for="Hunter Pence">Hunter Pence</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Tyler Heineman' value='13'>
+                <label for="Tyler Heineman">Tyler Heineman</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Steven Duggar' value='14'>
+                <label for="Steven Duggar">Steven Duggar</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Daniel Robertson' value='15'>
+                <label for="Daniel Robertson">Daniel Robertson</label>
+                <br>
+                <input type="checkbox" name='player-names'             id='Luis Alexander Basabe' value='16'>
+                <label for="Luis Alexander Basabe">Luis Alexander Basabe</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Jaylin Davis' value='17'>
+                <label for="Jaylin Davis">Jaylin Davis</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Joe McCarthy' value='18'>
+                <label for="Joe McCarthy">Joe McCarthy</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Justin Smoak' value='19'>
+                <label for="Justin Smoak">Justin Smoak</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Joey Rickard' value='20'>
+                <label for="Joey Rickard">Joey Rickard</label>
+                <br>
+                <input type="checkbox" name='player-names'id='Rob Brantly' value='21'>
+                <label for="Rob Brantly">Rob Brantly</label>
+                <br>
+                <input id='submit-players' type="submit" value='submit now' > 
+            </fieldset>
+        </form>
+    </section>
+
+    <section class='selection'>
+        <form  name='stat-selection'>
+        <fieldset>
+            <legend>Select Statistical Catagories</legend>
+            <input type="radio"  name='select-stats' id ='default' value='1' checked >General Offensive Stats<br>
+            
+            <input type="radio"  name='select-stats' id='gmStatSet' value='2'>Advanced Offensive Stats<br>
+
+            <input type="radio"  name='select-stats' id='custom-stats' value='3'>More Hitting Stats<br>
+            
+            <input id='submit-stats' type="submit" value='submit now' >            
+        </fieldset>
+        </form>
+    </section>
+
+  <section class='displayContainer'>
+    <div id= 'displayNames' class="columns">
+    </div>
+    <div id= 'displayStats' >
+        
+    </div>
+   
+  </section>  
+</body>
+<script src = app.js>
+    
+</script>
+</html>
