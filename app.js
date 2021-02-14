@@ -27,42 +27,38 @@ const giants2020= [
 
 let checkedPlayers = [];
 let roster = [];
+let selectedStats =[];
 
-//To show all players
-function showPlayers(){    
-    const container = document.getElementById('displayNames');
-    giants2020.forEach((item)=>{
-        const card = document.createElement('div');
-        card.setAttribute('class', 'card');
-        container.appendChild(card);
-
-        const name = document.createElement('p');
-        name.setAttribute('class', 'name');
-        name.textContent= item.name;
-        card.appendChild(name);        
+//Selection custom stat catagories
+function handleSelectStats(){
+    selectedStats.forEach((item)=>{
+        item ==1   ? showAtBats()
+        :item ==2  ? showAverage()
+        :item ==3  ? showHits()
+        :item ==4  ? showBB()
+        :item ==5  ? showSO()
+        :item ==6  ? showHR()
+        :item ==7  ? showRBI()
+        :item ==8  ? showPlateApp()
+        :item ==9  ? showOBP()
+        :item ==10 ? showOPS()
+        :item ==11 ? showOPSPlus()
+        :item ==12 ? showSB()
+        :item ==13 ? showCS()
+        :item ==14 ? showDoubles()
+        :item ==15 ? showTriples()
+        :item ==16 ? showTotalBases()
+        :item ==17 ? showSlugging()
+        :item ==18 ? showRuns()
+        :item ==19 ? showGames()
+        : console.log('none')
     })
-    //for some reason, roster array does not work with show-stats functions?
-   // roster = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
-}
-//to show only checked players
-function handleCheckedPlayers(){
-    const container = document.getElementById('displayNames');
-    checkedPlayers.forEach((item)=>{       
-        let player = giants2020[item].name;
-        const card = document.createElement('div');
-        card.setAttribute('class', 'card');
-        container.appendChild(card);
-        const name = document.createElement('p');
-        name.setAttribute('class', 'name');
-        name.textContent= player;
-        card.appendChild(name); 
-    })
-    roster = checkedPlayers;
 }
 
 const displayContainer = document.getElementById('displayStats');
+
 //Show-Stats functions
-function showAtBats(){   
+function showAtBats(){     
     const statContainer1 = document.createElement('div');
     statContainer1.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer1);
@@ -71,14 +67,13 @@ function showAtBats(){
         statCard.setAttribute('class', 'card');
         const atBats = document.createElement('p');       
         atBats.setAttribute('class', 'info');
-        atBats.textContent = giants2020[item].atBats; 
+        atBats.textContent = giants2020[item].atBats;        
         statContainer1.appendChild(statCard);
         statCard.appendChild(atBats);
-    })
+    })  
 }
 
 function showAverage(){ 
-    console.log(roster);
     const statContainer2 = document.createElement('div');
     statContainer2.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer2);    
@@ -141,6 +136,7 @@ function showHR(){
     statContainer6.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer6);
     roster.forEach((item)=>{
+        
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
 
@@ -168,111 +164,91 @@ function showRBI(){
             statCard.appendChild(rbi);
          }) 
 }
-//display basic stats for checked players 
-function showBasicStatSet() {   
-    showAtBats();
-    showAverage();
-    showHits();    
-    showBB();
-    showSO();
-    showHR();
-    showRBI();
-    }
-///Display Advanced stats for checked players***has bug in display***   
-function showSelectPlayerAdStats() {
-    const displayContainer = document.getElementById('displayStats');
-
+function showPlateApp(){
     const statContainer8 = document.createElement('div');
     statContainer8.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer8);
     roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
-
         const plateApp = document.createElement('p');
         plateApp.setAttribute('class', 'info');
         plateApp.textContent = giants2020[item].plateApp;
-
         statContainer8.appendChild(statCard);
-        statCard.appendChild(plateApp);
-        console.log(plateApp);
-        console.log(statContainer8)
+        statCard.appendChild(plateApp);       
     })
+}
+function showOBP(){
     const statContainer9 = document.createElement('div');
     statContainer9.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer9);
     roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
-
         const obp = document.createElement('p');
         obp.setAttribute('class', 'info');
         obp.textContent = giants2020[item].obp;
-
         statContainer9.appendChild(statCard);
         statCard.appendChild(obp);
     })
+}
+function showOPS(){
     const statContainer10 = document.createElement('div');
     statContainer10.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer10);
     roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
-
         const ops = document.createElement('p');
         ops.setAttribute('class', 'info');
         ops.textContent = giants2020[item].ops;
-
         statContainer10.appendChild(statCard);
         statCard.appendChild(ops);
     })
+}
+function showOPSPlus(){
     const statContainer11 = document.createElement('div');
     statContainer11.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer11);
     roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
-
         const opsPlus = document.createElement('p');
         opsPlus.setAttribute('class', 'info');
         opsPlus.textContent = giants2020[item].opsPlus;
-
         statContainer11.appendChild(statCard);
         statCard.appendChild(opsPlus);
     })
+}
+function showSB(){
     const statContainer12 = document.createElement('div');
     statContainer12.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer12);
     roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
-
         const sb = document.createElement('p');
         sb.setAttribute('class', 'info');
         sb.textContent = giants2020[item].sb;
-
         statContainer12.appendChild(statCard);
         statCard.appendChild(sb);
     })
+}
+function showCS(){
     const statContainer13 = document.createElement('div');
     statContainer13.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer13);
     roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
-
         const cs = document.createElement('p');
         cs.setAttribute('class', 'info');
         cs.textContent = giants2020[item].cs;
-
         statContainer13.appendChild(statCard);
         statCard.appendChild(cs);
     })
- } 
-//Display More Hitting Stats for select players
-function showSelectPlayerMoreHitStats(){
-    const displayContainer = document.getElementById('displayStats');
-    
+}
+function showDoubles(){
     const statContainer14 = document.createElement('div');
     statContainer14.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer14);
@@ -285,6 +261,8 @@ function showSelectPlayerMoreHitStats(){
         statContainer14.appendChild(statCard)
         statCard.appendChild(doubles);
     })
+}
+function showTriples(){
     const statContainer15 = document.createElement('div');
     statContainer15.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer15);
@@ -297,6 +275,8 @@ function showSelectPlayerMoreHitStats(){
         statContainer15.appendChild(statCard)
         statCard.appendChild(triples);
     })
+}
+function showTotalBases(){
     const statContainer16 = document.createElement('div');
     statContainer16.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer16);
@@ -309,6 +289,8 @@ function showSelectPlayerMoreHitStats(){
         statContainer16.appendChild(statCard)
         statCard.appendChild(totalBases);
     })
+}
+function showSlugging(){
     const statContainer17 = document.createElement('div');
     statContainer17.setAttribute('class','statContainer');
     displayContainer.appendChild(statContainer17);
@@ -322,264 +304,137 @@ function showSelectPlayerMoreHitStats(){
         statCard.appendChild(slugging);
     })
 }
-///Show Basic Stats for all players///
-function showAllPlayerBasicStatSet(){
-    const displayContainer = document.getElementById('displayStats');
-    const statContainer1 = document.createElement('div');
-    statContainer1.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer1);
-    giants2020.forEach((item)=>{        
+function showRuns(){
+    const statContainer18 = document.createElement('div');
+    statContainer18.setAttribute('class','statContainer');
+    displayContainer.appendChild(statContainer18);
+    roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
-        const atBats = document.createElement('p');       
-        atBats.setAttribute('class', 'info');
-        atBats.textContent = item.atBats; 
-        statContainer1.appendChild(statCard);
-        statCard.appendChild(atBats);
+        const runs = document.createElement('p');
+        runs.setAttribute('class', 'info');
+        runs.textContent = giants2020[item].runs;
+        statContainer18.appendChild(statCard)
+        statCard.appendChild(runs);
     })
-    const statContainer2 = document.createElement('div');
-    statContainer2.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer2);    
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const average = document.createElement('p');
-        average.setAttribute('class', 'info');
-        average.textContent = item.ba;
-        statContainer2.appendChild(statCard);
-        statCard.appendChild(average);
-    })
-    const statContainer3 = document.createElement('div');
-    statContainer3.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer3);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
- 
-        const hits = document.createElement('p');
-        hits.setAttribute('class', 'info');
-        hits.textContent = item.hits;
- 
-        statContainer3.appendChild(statCard)
-        statCard.appendChild(hits);
-    })
-    const statContainer4 = document.createElement('div');
-    statContainer4.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer4);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const bb = document.createElement('p');
-        bb.setAttribute('class', 'info');
-        bb.textContent = item.bb;
-        statContainer4.appendChild(statCard)
-        statCard.appendChild(bb);
-    })
-    const statContainer5 = document.createElement('div');
-    statContainer5.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer5);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const so = document.createElement('p');
-        so.setAttribute('class', 'info');
-        so.textContent = item.so; 
-        statContainer5.appendChild(statCard)
-        statCard.appendChild(so);
-    })
-    const statContainer6 = document.createElement('div');
-    statContainer6.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer6);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const hr = document.createElement('p');
-        hr.setAttribute('class', 'info');
-        hr.textContent = item.hr;
-        statContainer6.appendChild(statCard)
-        statCard.appendChild(hr);
-    })
-    const statContainer7 = document.createElement('div');
-    statContainer7.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer7);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const rbi = document.createElement('p');
-        rbi.setAttribute('class', 'info');
-        rbi.textContent = item.rbi; 
-        statContainer7.appendChild(statCard)
-        statCard.appendChild(rbi);
-    })       
 }
-
-//display advanced offensive stats - all players//
-function showAdvancedStatSet(){
-    const displayContainer = document.getElementById('displayStats');
-
-    const statContainer8 = document.createElement('div');
-    statContainer8.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer8);
-    giants2020.forEach((item)=>{
+function showGames(){
+    const statContainer19 = document.createElement('div');
+    statContainer19.setAttribute('class','statContainer');
+    displayContainer.appendChild(statContainer19);
+    roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
-        const plateApp = document.createElement('p');
-        plateApp.setAttribute('class', 'info');
-        plateApp.textContent = item.plateApp;
-        statContainer8.appendChild(statCard);
-        statCard.appendChild(plateApp);
-    })
-
-    const statContainer9 = document.createElement('div');
-    statContainer9.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer9);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const obp = document.createElement('p');
-        obp.setAttribute('class', 'info');
-        obp.textContent = item.obp;
-        statContainer9.appendChild(statCard);
-        statCard.appendChild(obp);
-    })
-    const statContainer10 = document.createElement('div');
-    statContainer10.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer10);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const ops = document.createElement('p');
-        ops.setAttribute('class', 'info');
-        ops.textContent = item.ops;
-        statContainer10.appendChild(statCard);
-        statCard.appendChild(ops);
-    })
-    const statContainer11 = document.createElement('div');
-    statContainer11.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer11);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const opsPlus = document.createElement('p');
-        opsPlus.setAttribute('class', 'info');
-        opsPlus.textContent = item.opsPlus;
-        statContainer11.appendChild(statCard);
-        statCard.appendChild(opsPlus);
-    })
-    const statContainer12 = document.createElement('div');
-    statContainer12.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer12);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const sb = document.createElement('p');
-        sb.setAttribute('class', 'info');
-        sb.textContent = item.sb;
-        statContainer12.appendChild(statCard);
-        statCard.appendChild(sb);
-    })
-    const statContainer13 = document.createElement('div');
-    statContainer13.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer13);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const cs = document.createElement('p');
-        cs.setAttribute('class', 'info');
-        cs.textContent = item.cs;
-        statContainer13.appendChild(statCard);
-        statCard.appendChild(cs);
+        const games = document.createElement('p');
+        games.setAttribute('class', 'info');
+        games.textContent = giants2020[item].games;
+        statContainer19.appendChild(statCard)
+        statCard.appendChild(games);
     })
 }
 
-///Display More Hitting Stats for all players
-function showMoreHittingStats(){    
-    const displayContainer = document.getElementById('displayStats');
-    const statContainer14 = document.createElement('div');
-    statContainer14.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer14);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const doubles = document.createElement('p');
-        doubles.setAttribute('class', 'info');
-        doubles.textContent = item.doubles;
-        statContainer14.appendChild(statCard);
-        statCard.appendChild(doubles);
-    })
-    const statContainer15 = document.createElement('div');
-    statContainer15.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer15);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const triples = document.createElement('p');
-        triples.setAttribute('class', 'info');
-        triples.textContent = item.triples;
-        statContainer15.appendChild(statCard);
-        statCard.appendChild(triples);
-    })
-    const statContainer16 = document.createElement('div');
-    statContainer16.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer16);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const totalBases = document.createElement('p');
-        totalBases.setAttribute('class', 'info');
-        totalBases.textContent = item.totalBases;
-        statContainer16.appendChild(statCard);
-        statCard.appendChild(totalBases);
-    })
-    const statContainer17 = document.createElement('div');
-    statContainer17.setAttribute('class','statContainer');
-    displayContainer.appendChild(statContainer17);
-    giants2020.forEach((item)=>{
-        const statCard = document.createElement('div');
-        statCard.setAttribute('class', 'card');
-        const slugging = document.createElement('p');
-        slugging.setAttribute('class', 'info');
-        slugging.textContent = item.slugging;
-        statContainer17.appendChild(statCard);
-        statCard.appendChild(slugging);
-    })
+//display basic stats  
+function showBasicStatSet() {     
+    showAtBats(); 
+    showAverage();
+    showHits();    
+    showBB();
+    showSO();
+    showHR();
+    showRBI();
 }
+//display advanced stats 
+function showAdvancedStatSet() {
+    showPlateApp();
+    showOBP();
+    showOPS();
+    showOPSPlus();
+    showSB();
+    showCS();
+      
+ } 
+
+//Display More Hitting Stats
+function showMoreHittingStats(){
+    showGames();
+    showDoubles();
+    showTriples();
+    showTotalBases();
+    showSlugging();
+    showRuns();
+}
+
+//To show all players
+function showAllPlayers(){    
+    checkedPlayers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];  
+    handleCheckedPlayers(checkedPlayers); 
+ }
+
+//to process player name list
+function handleCheckedPlayers(){
+    const container = document.getElementById('displayNames');  
+    checkedPlayers.forEach((item)=>{          
+        let player = giants2020[item].name;      
+        const card = document.createElement('div');
+        card.setAttribute('class', 'card');
+        container.appendChild(card);
+        const name = document.createElement('p');
+        name.setAttribute('class', 'name');
+        name.textContent= player;
+        card.appendChild(name); 
+    })
+    roster = checkedPlayers; 
+}
+
 //all players or select players - radio btn input
-let playerButton = true
 function showPlayerSelector(){
-    document.querySelector('.wrapper').setAttribute('class', 'wrapper-display');
-    playerButton = false;
+    //display player list with checkboxes
+    document.querySelector('.player-checkbox').setAttribute('class', 'player-checkbox-display');
+    //get selected players from checkboxes
+    document.getElementById('submit-players').addEventListener('click', (e)=> {
+        event.preventDefault();
+        let selectPlayers = document.getElementsByName('player-names');
+        let playersArray = Array.from(selectPlayers);
+        checkedPlayers.push(0);   
+        for(let i = 0; i< playersArray.length; i++){
+             playersArray[i].checked === true ? checkedPlayers.push(playersArray[i].value)        
+            : console.log('no')
+        }       
+    handleCheckedPlayers(checkedPlayers); 
+    })    
+}
+function showStatSelector(){
+    document.querySelector('.stat-selector').setAttribute('class', 'stat-selector-show');
+    //Process selected stat catagories
+    document.getElementById('submit-statCat').addEventListener('click', (e)=>{
+        event.preventDefault();
+        let selectStat = document.getElementsByName('stat-cat');
+        let statArray = Array.from(selectStat);   
+        for(let i = 0; i< statArray.length; i++){
+            statArray[i].checked === true ? selectedStats.push(statArray[i].value)        
+            : console.log('no')
+        } 
+    handleSelectStats(selectedStats)
+    })
 }
 document.getElementById('submit').addEventListener('click', (e)=> {
     event.preventDefault();
     let radiobuttons = document.getElementsByName('select');
     radiobuttons[0].checked ===true ?  
-          showPlayers() 
+          showAllPlayers() 
          :showPlayerSelector()
 })
 
-//get selected players from checkboxes
-document.getElementById('submit-players').addEventListener('click', (e)=> {
-    event.preventDefault();
-    let selectPlayers = document.getElementsByName('player-names');
-    let playersArray = Array.from(selectPlayers);
-    checkedPlayers.push(0);   
-    for(let i = 0; i< playersArray.length; i++){
-        playersArray[i].checked === true ? checkedPlayers.push(playersArray[i].value)        
-        : console.log('no')
-    }  
-    handleCheckedPlayers(checkedPlayers); 
-})
-
-// display default or selected stats
+// display stat stats or selected stats
 document.getElementById('submit-stats').addEventListener('click', (e)=>{
-    event.preventDefault();
+    event.preventDefault();    
     let stat = document.querySelector('input[name="select-stats"]:checked');
-        stat.value ==1 &  playerButton ===true ? showAllPlayerBasicStatSet()
-        :stat.value ==1 & playerButton ===false ? showBasicStatSet()
-        :stat.value ==2 & playerButton===true ? showAdvancedStatSet()
-        :stat.value ==2 & playerButton===false ? showSelectPlayerAdStats()
-        :stat.value ==3 & playerButton===true ? showMoreHittingStats()
-        :stat.value ==3 & playerButton===false ? showSelectPlayerMoreHitStats()
-        :console.log('no value')                                                                                                                                                                                                        
-}) 
+        stat.value ==1  ? showBasicStatSet(roster)
+        :stat.value ==2 ? showAdvancedStatSet(roster)       
+        :stat.value ==3 ? showMoreHittingStats(roster) 
+        :stat.value ==4 ? showStatSelector()  
+        :console.log('no value')                                                                                                                                                                                             
+})
+ 
+
+

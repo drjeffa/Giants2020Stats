@@ -34,11 +34,20 @@
     height: 30px;
     padding-bottom:10px ;
 }
-.wrapper {
-    
+.player-checkbox {
     display: none;
 }
-.wrapper-display {
+
+.player-checkbox-display {
+    display: block;
+    background-color: orange;
+    border: solid 1px black;
+}
+.stat-selector {
+    display: none;
+}
+
+.stat-selector-show {
     display: block;
     background-color: orange;
     border: solid 1px black;

@@ -25,7 +25,7 @@
 
 
     
-    <section class="wrapper">
+    <section class="player-checkbox">
        
         <form name='player-list'>
             <fieldset>
@@ -106,23 +106,88 @@
             
             <input type="radio"  name='select-stats' id='gmStatSet' value='2'>Advanced Offensive Stats<br>
 
-            <input type="radio"  name='select-stats' id='custom-stats' value='3'>More Hitting Stats<br>
+            <input type="radio"  name='select-stats' id='hitting-stats' value='3'>More Hitting Stats<br>
+
+            <input type="radio"  name='select-stats' id='custom-stats' value='4'>Select your own stat catagories<br>
             
             <input id='submit-stats' type="submit" value='submit now' >            
         </fieldset>
         </form>
     </section>
-
+   
+    <section class="stat-selector">
+       
+        <form name='stat-list'>
+            <fieldset>
+                <legend>Select up to 7 stat catagories</legend>
+                <input type="checkbox" name='stat-cat'id='atBats' value='1'>
+                <label for="atBats">At Bats</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='average' value='2'>
+                <label for="average">Batting Average</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='hits' value='3'>
+                <label for="hits">Hits</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='BB' value='4'>
+                <label for="BB">Walks(BB)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='so' value='5'>
+                <label for="so">Strikeouts(SO)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='HR' value='6'>
+                <label for="HR">Homeruns(HR)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='RBI' value='7'>
+                <label for="RBI">Run Batted In(RBI)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='plateApp' value='8'>
+                <label for="plateApp">Plate Appearances(PA)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='OBP' value='9'>
+                <label for="OBP">On Base Percentage(OBP)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='OPS' value='10'>
+                <label for="OPS">OPS</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='OPSplus' value='11'>
+                <label for="OPSplus">OPS plus</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='SB' value='12'>
+                <label for="SB">Stolen Bases(SB)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='CS' value='13'>
+                <label for="CS">Caught Stealing(CS)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='doubles' value='14'>
+                <label for="doubles">Doubles(2B)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='triples' value='15'>
+                <label for="triples">Triples(3B)</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='totalBases' value='16'>
+                <label for="totalBases">Total Bases</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='slugging' value='17'>
+                <label for="slugging">Slugging %</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='runs' value='18'>
+                <label for="runs">Runs</label>
+                <br>
+                <input type="checkbox" name='stat-cat'id='games' value='19'>
+                <label for="games">Games Played</label>
+                <br>
+                <input id='submit-statCat' type="submit" value='submit now' >            
+            </fieldset>
+            </form>
+    </section>
   <section class='displayContainer'>
     <div id= 'displayNames' class="columns">
     </div>
-    <div id= 'displayStats' >
-        
-    </div>
-   
+    <div id= 'displayStats' >    
+    </div> 
   </section>  
 </body>
-<script src = app.js>
-    
+<script src = app.js>    
 </script>
 </html>
