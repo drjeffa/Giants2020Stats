@@ -2,7 +2,7 @@ const giants2020= [
     {
         k:0,pos:'Position',name:'Player',age: 'age',games:'Games',plateApp:'PA',atBats:'AB',runs:'Runs',hits:'Hits',doubles:'2B',triples:'3B',hr:'HR',rbi:'RBI',sb:'SB',cs:'CS',bb:'BB',so:'SO',ba:'BA',obp:'OBP',slugging:'Slug%',ops:'OPS',opsPlus:'OPS+',totalBases:'TB'},
     
-    {	k	:	3	,	pos	:	"	2B	"	,	name	:	"	Donovan Solano	"	,	age	:	32	,	games	:	54	,	plateApp	:	203	,	atBats	:	190	,	runs	:	22	,	hits	:	62	,	doubles	:	15	,	triples	:	1	,	hr	:	3	,	rbi	:	29	,	sb	:	0	,	cs	:	0	,	bb	:	10	,	so	:	39	,	ba	:	0.326	,	obp	:	0.365	,	slugging	:	0.463	,	ops	:	0.828	,	opsPlus	:	128	,	totalBases	:	88	}	,
+    {	k	:	3	,	pos	:	"	2B	"	,	name	:	"	Donovan Solano	"	,	age	:	32	,	games	:	54	,	plateApp	:	203	,	atBats	:	190	,	runs	:	22	,	hits	:	62	,	doubles	:	15	,	triples	:	1	,	hr	:	3	,	rbi	:	29	,	sb	:	0	,	cs	:	0	,	bb	:	10	,	so	:	39	,	ba	:	.326	,	obp	:	0.365	,	slugging	:	0.463	,	ops	:	0.828	,	opsPlus	:	128	,	totalBases	:	88	}	,
 {	k	:	4	,	pos	:	"	SS	"	,	name	:	"	Brandon Crawford*	"	,	age	:	33	,	games	:	54	,	plateApp	:	193	,	atBats	:172	,	runs	:	26	,	hits	:	44	,	doubles	:	12	,	triples	:	0	,	hr	:	8	,	rbi	:	28	,	sb	:	1	,	cs	:	2	,	bb	:	15	,	so	:	47	,	ba	:	0.256	,	obp	:	0.326	,	slugging	:	0.465	,	ops	:	0.792	,	opsPlus	:	116	,	totalBases	:	80	}	,
 {	k	:	5	,	pos	:	"	3B	"	,	name	:	"	Evan Longoria	"	,	age	:	34	,	games	:	53	,	plateApp	:	209	,	atBats	:	193	,	runs	:	26	,	hits	:	49	,	doubles	:	10	,	triples	:	1	,	hr	:	7	,	rbi	:	28	,	sb	:	0	,	cs	:	1	,	bb	:	11	,	so	:	39	,	ba	:	0.254	,	obp	:	0.297	,	slugging	:	0.425	,	ops	:	0.722	,	opsPlus	:	97	,	totalBases	:	82	}	,
 {	k	:	6	,	pos	:	"	LF	"	,	name	:	"	Alex Dickerson*	"	,	age	:	30	,	games	:	52	,	plateApp	:	170	,	atBats	:	151	,	runs	:	28	,	hits	:	45	,	doubles	:	10	,	triples	:	1	,	hr	:	10	,	rbi	:	27	,	sb	:	0	,	cs	:	0	,	bb	:	16	,	so	:	30	,	ba	:	0.298	,	obp	:	0.371	,	slugging	:	0.576	,	ops	:	0.947	,	opsPlus	:	157	,	totalBases	:	87	}	,
@@ -11,9 +11,9 @@ const giants2020= [
 {	k	:	9	,	pos	:	"	DH	"	,	name	:	"	Wilmer Flores	"	,	age	:	28	,	games	:	55	,	plateApp	:	213	,	atBats	:	198	,	runs	:	30	,	hits	:	53	,	doubles	:	11	,	triples	:	1	,	hr	:	12	,	rbi	:	32	,	sb	:	1	,	cs	:	0	,	bb	:	13	,	so	:	36	,	ba	:	0.268	,	obp	:	0.315	,	slugging	:	0.515	,	ops	:	0.83	,	opsPlus	:	125	,	totalBases	:	102	}	,
 {	k	:	10	,	pos	:	"	DH	"	,	name	:	"	Austin Slater	"	,	age	:	27	,	games	:	31	,	plateApp	:	104	,	atBats	:	85	,	runs	:	18	,	hits	:	24	,	doubles	:	2	,	triples	:	1	,	hr	:	5	,	rbi	:	7	,	sb	:	8	,	cs	:	1	,	bb	:	16	,	so	:	22	,	ba	:	0.282	,	obp	:	0.408	,	slugging	:	0.506	,	ops	:	0.914	,	opsPlus	:	152	,	totalBases	:	43	}	,
 {	k	:	11	,	pos	:	"	UT	"	,	name	:	"	Darin Ruf	"	,	age	:	33	,	games	:	40	,	plateApp	:	100	,	atBats	:	87	,	runs	:	11	,	hits	:	24	,	doubles	:	6	,	triples	:	0	,	hr	:	5	,	rbi	:	18	,	sb	:	1	,	cs	:	0	,	bb	:	13	,	so	:	23	,	ba	:	0.276	,	obp	:	0.37	,	slugging	:	0.517	,	ops	:	0.887	,	opsPlus	:	143	,	totalBases	:	45	}	,
-{	k	:	12	,	pos	:	"	DH	"	,	name	:	"	Pablo Sandoval#	"	,	age	:	33	,	games	:	33	,	plateApp	:	90	,	atBats	:	82	,	runs	:	5	,	hits	:	18	,	doubles	:	1	,	triples	:	0	,	hr	:	1	,	rbi	:	6	,	sb	:	0	,	cs	:	0	,	bb	:	6	,	so	:	18	,	ba	:	0.22	,	obp	:	0.278	,	slugging	:	0.268	,	ops	:	0.546	,	opsPlus	:	53	,	totalBases	:	22	}	,
+{	k	:	12	,	pos	:	"	DH	"	,	name	:	"	Pablo Sandoval#	"	,	age	:	33	,	games	:	33	,	plateApp	:	90	,	atBats	:	82	,	runs	:	5	,	hits	:	18	,	doubles	:	1	,	triples	:	0	,	hr	:	1	,	rbi	:	6	,	sb	:	0	,	cs	:	0	,	bb	:	6	,	so	:	18	,	ba	:	0.220	,	obp	:	0.278	,	slugging	:	0.268	,	ops	:	0.546	,	opsPlus	:	53	,	totalBases	:	22	}	,
 {	k	:	13	,	pos	:	"	C	"	,	name	:	"	Chadwick Tromp	"	,	age	:	25	,	games	:	24	,	plateApp	:	64	,	atBats	:	61	,	runs	:	11	,	hits	:	13	,	doubles	:	1	,	triples	:	0	,	hr	:	4	,	rbi	:	10	,	sb	:	0	,	cs	:	0	,	bb	:	1	,	so	:	20	,	ba	:	0.213	,	obp	:	0.219	,	slugging	:	0.426	,	ops	:	0.645	,	opsPlus	:	73	,	totalBases	:	26	}	,
-{	k	:	14	,	pos	:	"	OF	"	,	name	:	"	Hunter Pence	"	,	age	:	37	,	games	:	17	,	plateApp	:	56	,	atBats	:	52	,	runs	:	4	,	hits	:	5	,	doubles	:	0	,	triples	:	1	,	hr	:	2	,	rbi	:	6	,	sb	:	0	,	cs	:	0	,	bb	:	3	,	so	:	15	,	ba	:	0.096	,	obp	:	0.161	,	slugging	:	0.25	,	ops	:	0.411	,	opsPlus	:	12	,	totalBases	:	13	}	,
+{	k	:	14	,	pos	:	"	OF	"	,	name	:	"	Hunter Pence	"	,	age	:	37	,	games	:	17	,	plateApp	:	56	,	atBats	:	52	,	runs	:	4	,	hits	:	5	,	doubles	:	0	,	triples	:	1	,	hr	:	2	,	rbi	:	6	,	sb	:	0	,	cs	:	0	,	bb	:	3	,	so	:	15	,	ba	:	0.096	,	obp	:	0.161	,	slugging	:	0.250	,	ops	:	0.411	,	opsPlus	:	12	,	totalBases	:	13	}	,
 {	k	:	15	,	pos	:	"	C	"	,	name	:	"	Tyler Heineman#	"	,	age	:	29	,	games	:	15	,	plateApp	:	50	,	atBats	:	42	,	runs	:	3	,	hits	:	8	,	doubles	:	1	,	triples	:	0	,	hr	:	0	,	rbi	:	1	,	sb	:	1	,	cs	:	0	,	bb	:	4	,	so	:	6	,	ba	:	0.19	,	obp	:	0.292	,	slugging	:	0.214	,	ops	:	0.506	,	opsPlus	:	44	,	totalBases	:	9	}	,
 {	k	:	16	,	pos	:	"	OF	"	,	name	:	"	Steven Duggar*	"	,	age	:	26	,	games	:	21	,	plateApp	:	36	,	atBats	:	34	,	runs	:	3	,	hits	:	6	,	doubles	:	2	,	triples	:	0	,	hr	:	0	,	rbi	:	3	,	sb	:	1	,	cs	:	0	,	bb	:	1	,	so	:	11	,	ba	:	0.176	,	obp	:	0.222	,	slugging	:	0.235	,	ops	:	0.458	,	opsPlus	:	27	,	totalBases	:	8	}	,
 {	k	:	17	,	pos	:	"	UT	"	,	name	:	"	Daniel Robertson	"	,	age	:	26	,	games	:	13	,	plateApp	:	24	,	atBats	:	21	,	runs	:	4	,	hits	:	7	,	doubles	:	0	,	triples	:	0	,	hr	:	0	,	rbi	:	2	,	sb	:	0	,	cs	:	0	,	bb	:	3	,	so	:	6	,	ba	:	0.333	,	obp	:	0.417	,	slugging	:	0.333	,	ops	:	0.75	,	opsPlus	:	113	,	totalBases	:	7	}	,
@@ -41,9 +41,13 @@ function showAtBats(){
     roster.forEach((item)=>{        
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
+       
         const atBats = document.createElement('p');       
         atBats.setAttribute('class', 'info');
-        atBats.textContent = giants2020[item].atBats;        
+        atBats.textContent = giants2020[item].atBats;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         }; 
         statContainer1.appendChild(statCard);
         statCard.appendChild(atBats);
     })  
@@ -56,9 +60,13 @@ function showAverage(){
     roster.forEach((item)=>{
         const statCard = document.createElement('div');
         statCard.setAttribute('class', 'card');
+       
         const average = document.createElement('p');
         average.setAttribute('class', 'info');
         average.textContent = giants2020[item].ba;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer2.appendChild(statCard);
         statCard.appendChild(average);
     })
@@ -73,6 +81,9 @@ function showHits(){
         const hits = document.createElement('p');
         hits.setAttribute('class', 'info');
         hits.textContent = giants2020[item].hits;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer3.appendChild(statCard);
         statCard.appendChild(hits);
     })
@@ -88,7 +99,9 @@ function showBB(){
              const bb = document.createElement('p');
              bb.setAttribute('class', 'info');
              bb.textContent = giants2020[item].bb;
- 
+             if(giants2020[item].k ===0){
+                statCard.setAttribute('style','background-color:red;');      
+             };
              statContainer4.appendChild(statCard);
              statCard.appendChild(bb);
          })
@@ -103,6 +116,9 @@ function showSO(){
             const so = document.createElement('p');
             so.setAttribute('class', 'info');
             so.textContent = giants2020[item].so;
+            if(giants2020[item].k ===0){
+                statCard.setAttribute('style','background-color:red;');      
+             };
             statContainer5.appendChild(statCard);
             statCard.appendChild(so);
          })
@@ -119,7 +135,9 @@ function showHR(){
         const hr = document.createElement('p');
         hr.setAttribute('class', 'info');
         hr.textContent = giants2020[item].hr;
-   
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer6.appendChild(statCard);
         statCard.appendChild(hr);
      })
@@ -135,7 +153,9 @@ function showRBI(){
             const rbi = document.createElement('p');
             rbi.setAttribute('class', 'info');
             rbi.textContent = giants2020[item].rbi;
- 
+            if(giants2020[item].k ===0){
+                statCard.setAttribute('style','background-color:red;');      
+             };
             statContainer7.appendChild(statCard);
             statCard.appendChild(rbi);
          }) 
@@ -150,6 +170,9 @@ function showPlateApp(){
         const plateApp = document.createElement('p');
         plateApp.setAttribute('class', 'info');
         plateApp.textContent = giants2020[item].plateApp;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer8.appendChild(statCard);
         statCard.appendChild(plateApp);       
     })
@@ -164,6 +187,9 @@ function showOBP(){
         const obp = document.createElement('p');
         obp.setAttribute('class', 'info');
         obp.textContent = giants2020[item].obp;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer9.appendChild(statCard);
         statCard.appendChild(obp);
     })
@@ -178,6 +204,9 @@ function showOPS(){
         const ops = document.createElement('p');
         ops.setAttribute('class', 'info');
         ops.textContent = giants2020[item].ops;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer10.appendChild(statCard);
         statCard.appendChild(ops);
     })
@@ -192,6 +221,9 @@ function showOPSPlus(){
         const opsPlus = document.createElement('p');
         opsPlus.setAttribute('class', 'info');
         opsPlus.textContent = giants2020[item].opsPlus;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer11.appendChild(statCard);
         statCard.appendChild(opsPlus);
     })
@@ -206,6 +238,9 @@ function showSB(){
         const sb = document.createElement('p');
         sb.setAttribute('class', 'info');
         sb.textContent = giants2020[item].sb;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer12.appendChild(statCard);
         statCard.appendChild(sb);
     })
@@ -220,6 +255,9 @@ function showCS(){
         const cs = document.createElement('p');
         cs.setAttribute('class', 'info');
         cs.textContent = giants2020[item].cs;
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
         statContainer13.appendChild(statCard);
         statCard.appendChild(cs);
     })
@@ -234,7 +272,10 @@ function showDoubles(){
         const doubles = document.createElement('p');
         doubles.setAttribute('class', 'info');
         doubles.textContent = giants2020[item].doubles;
-        statContainer14.appendChild(statCard)
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
+        statContainer14.appendChild(statCard);
         statCard.appendChild(doubles);
     })
 }
@@ -248,7 +289,10 @@ function showTriples(){
         const triples = document.createElement('p');
         triples.setAttribute('class', 'info');
         triples.textContent = giants2020[item].triples;
-        statContainer15.appendChild(statCard)
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
+        statContainer15.appendChild(statCard);
         statCard.appendChild(triples);
     })
 }
@@ -262,7 +306,10 @@ function showTotalBases(){
         const totalBases = document.createElement('p');
         totalBases.setAttribute('class', 'info');
         totalBases.textContent = giants2020[item].totalBases;
-        statContainer16.appendChild(statCard)
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
+        statContainer16.appendChild(statCard);
         statCard.appendChild(totalBases);
     })
 }
@@ -276,7 +323,10 @@ function showSlugging(){
         const slugging = document.createElement('p');
         slugging.setAttribute('class', 'info');
         slugging.textContent = giants2020[item].slugging;
-        statContainer17.appendChild(statCard)
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
+        statContainer17.appendChild(statCard);
         statCard.appendChild(slugging);
     })
 }
@@ -290,7 +340,10 @@ function showRuns(){
         const runs = document.createElement('p');
         runs.setAttribute('class', 'info');
         runs.textContent = giants2020[item].runs;
-        statContainer18.appendChild(statCard)
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
+        statContainer18.appendChild(statCard);
         statCard.appendChild(runs);
     })
 }
@@ -304,7 +357,10 @@ function showGames(){
         const games = document.createElement('p');
         games.setAttribute('class', 'info');
         games.textContent = giants2020[item].games;
-        statContainer19.appendChild(statCard)
+        if(giants2020[item].k ===0){
+            statCard.setAttribute('style','background-color:red;');      
+         };
+        statContainer19.appendChild(statCard);
         statCard.appendChild(games);
     })
 }
@@ -384,10 +440,15 @@ function handleCheckedPlayers(){
         let player = giants2020[item].name;      
         const card = document.createElement('div');
         card.setAttribute('class', 'card');
+        
+        
         container.appendChild(card);
         const name = document.createElement('p');
         name.setAttribute('class', 'name');
         name.textContent= player;
+        if(giants2020[item].k ===0){
+           card.setAttribute('style','background-color:red;');      
+        };
         card.appendChild(name); 
     })
     
@@ -448,7 +509,8 @@ document.getElementById('submit-stats').addEventListener('click', (e)=>{
         :console.log('no value')                                                                                                                                                                                             
 })
 //clear-all button
-document.getElementById('clearBtn').addEventListener('click', (e)=>{  
+document.getElementById('clearBtn').addEventListener('click', (e)=>{ 
+    
     document.getElementsByClassName('statContainer').setAttribute('display','none');
     document.querySelector('.player-checkbox-display').setAttribute('class', 'player-checkbox');
     document.querySelector('.stat-selector-show').setAttribute('class', 'stat-selector');   

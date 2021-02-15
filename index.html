@@ -7,8 +7,8 @@
     <title>Giants Batting Statistics 2020</title>
 </head>
 <body>
-    <header>
-        <h1 id='title'>Giants Stats 2020</h1>
+    <header id='header'>
+        <h1 id='title'>Giants Statistics 2020</h1>
     </header>
     <section class='selection'>
         <form  name='selection-form'>
@@ -18,12 +18,13 @@
             
             <input type="radio"  name='select' id='select' value='no'>Select Players<br>
             
-            <input id='submit' type="submit" value='submit now' >            
+            <input class= 'submit-btn' id='submit' type="submit" value='submit now' >            
         </fieldset>
         <button id='clearBtn'>Reset</button>
         </form>
     </section>
-
+  
+   
 
     
     <section class="player-checkbox">
@@ -111,7 +112,7 @@
 
             <input type="radio"  name='select-stats' id='custom-stats' value='4'>Select your own stat catagories<br>
             
-            <input id='submit-stats' type="submit" value='submit now' >            
+            <input class= 'submit-btn' id='submit-stats' type="submit" value='submit now' >            
         </fieldset>
         </form>
     </section>
@@ -183,7 +184,7 @@
             </form>
     </section>
   <section class='displayContainer'>
-    <div id= 'displayNames' class="columns">
+    <div id= 'displayNames' >
     </div>
     <div id= 'displayStats' >    
     </div> 
