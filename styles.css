@@ -10,8 +10,16 @@
     line-height: 1.6;
     text-align: center;
 }
-
-    
+#statSelectionBox {
+    display: none;
+}
+#statSelectionBox-Show {
+    display: block;
+} 
+#clearBtn {
+    margin: 10px;
+    background-color: red;
+}  
 
 .card {
     background-color:red;

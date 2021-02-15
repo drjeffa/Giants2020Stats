@@ -29,31 +29,7 @@ let checkedPlayers = [];
 let roster = [];
 let selectedStats =[];
 
-//Selection custom stat catagories
-function handleSelectStats(){
-    selectedStats.forEach((item)=>{
-        item ==1   ? showAtBats()
-        :item ==2  ? showAverage()
-        :item ==3  ? showHits()
-        :item ==4  ? showBB()
-        :item ==5  ? showSO()
-        :item ==6  ? showHR()
-        :item ==7  ? showRBI()
-        :item ==8  ? showPlateApp()
-        :item ==9  ? showOBP()
-        :item ==10 ? showOPS()
-        :item ==11 ? showOPSPlus()
-        :item ==12 ? showSB()
-        :item ==13 ? showCS()
-        :item ==14 ? showDoubles()
-        :item ==15 ? showTriples()
-        :item ==16 ? showTotalBases()
-        :item ==17 ? showSlugging()
-        :item ==18 ? showRuns()
-        :item ==19 ? showGames()
-        : console.log('none')
-    })
-}
+
 
 const displayContainer = document.getElementById('displayStats');
 
@@ -334,7 +310,8 @@ function showGames(){
 }
 
 //display basic stats  
-function showBasicStatSet() {     
+function showBasicStatSet() { 
+    
     showAtBats(); 
     showAverage();
     showHits();    
@@ -363,15 +340,45 @@ function showMoreHittingStats(){
     showSlugging();
     showRuns();
 }
+//Selection custom stat catagories
+function handleSelectStats(){
+    document.querySelector('.stat-selector-show').setAttribute('class', 'stat-selector');
+    selectedStats.forEach((item)=>{
+        item ==1   ? showAtBats()
+        :item ==2  ? showAverage()
+        :item ==3  ? showHits()
+        :item ==4  ? showBB()
+        :item ==5  ? showSO()
+        :item ==6  ? showHR()
+        :item ==7  ? showRBI()
+        :item ==8  ? showPlateApp()
+        :item ==9  ? showOBP()
+        :item ==10 ? showOPS()
+        :item ==11 ? showOPSPlus()
+        :item ==12 ? showSB()
+        :item ==13 ? showCS()
+        :item ==14 ? showDoubles()
+        :item ==15 ? showTriples()
+        :item ==16 ? showTotalBases()
+        :item ==17 ? showSlugging()
+        :item ==18 ? showRuns()
+        :item ==19 ? showGames()
+        : console.log('none')
+    })
+    
+}
+ 
 
 //To show all players
 function showAllPlayers(){    
-    checkedPlayers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];  
+    checkedPlayers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
+    document.querySelector('#statSelectionBox').setAttribute('id','statSelectionBox-Show');
+    
     handleCheckedPlayers(checkedPlayers); 
  }
 
 //to process player name list
-function handleCheckedPlayers(){
+function handleCheckedPlayers(){    
     const container = document.getElementById('displayNames');  
     checkedPlayers.forEach((item)=>{          
         let player = giants2020[item].name;      
@@ -383,6 +390,7 @@ function handleCheckedPlayers(){
         name.textContent= player;
         card.appendChild(name); 
     })
+    
     roster = checkedPlayers; 
 }
 
@@ -395,6 +403,8 @@ function showPlayerSelector(){
         event.preventDefault();
         let selectPlayers = document.getElementsByName('player-names');
         let playersArray = Array.from(selectPlayers);
+        document.querySelector('#statSelectionBox').setAttribute('id','statSelectionBox-Show');
+        document.querySelector('.player-checkbox-display').setAttribute('class', 'player-checkbox');
         checkedPlayers.push(0);   
         for(let i = 0; i< playersArray.length; i++){
              playersArray[i].checked === true ? checkedPlayers.push(playersArray[i].value)        
@@ -418,16 +428,18 @@ function showStatSelector(){
     })
 }
 document.getElementById('submit').addEventListener('click', (e)=> {
-    event.preventDefault();
-    let radiobuttons = document.getElementsByName('select');
+    event.preventDefault();   
+    let radiobuttons = document.getElementsByName('select');   
     radiobuttons[0].checked ===true ?  
           showAllPlayers() 
          :showPlayerSelector()
+       
 })
 
 // display stat stats or selected stats
 document.getElementById('submit-stats').addEventListener('click', (e)=>{
-    event.preventDefault();    
+    event.preventDefault(); 
+    document.querySelector('#statSelectionBox-Show').setAttribute('id', 'statSelectionBox');
     let stat = document.querySelector('input[name="select-stats"]:checked');
         stat.value ==1  ? showBasicStatSet(roster)
         :stat.value ==2 ? showAdvancedStatSet(roster)       
@@ -435,6 +447,13 @@ document.getElementById('submit-stats').addEventListener('click', (e)=>{
         :stat.value ==4 ? showStatSelector()  
         :console.log('no value')                                                                                                                                                                                             
 })
+//clear-all button
+document.getElementById('clearBtn').addEventListener('click', (e)=>{  
+    document.getElementsByClassName('statContainer').setAttribute('display','none');
+    document.querySelector('.player-checkbox-display').setAttribute('class', 'player-checkbox');
+    document.querySelector('.stat-selector-show').setAttribute('class', 'stat-selector');   
+    checkedPlayers = [];
+    roster = [];
+    selectedStats =[];    
+})
  
-
-
