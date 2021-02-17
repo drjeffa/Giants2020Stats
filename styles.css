@@ -1,12 +1,21 @@
 
 #header {
-    background-color: orange;
+    background-color: #fffef7;
     padding: 30px;
+}
+#headerImage {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+    margin-top: 5px;
+    
 }
 #displayNames {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     font-size: 15px;
+    background-color: #fffef7;
     
 }
 
@@ -14,12 +23,14 @@
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     text-align: center;
+    margin-top:5px;
 }
 #statSelectionBox {
     display: none;
 }
 #statSelectionBox-Show {
     display: block;
+    
 } 
 
 #clearBtn {
@@ -39,12 +50,30 @@
     
     grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
+#footer {
+    background-color: #fffef7;
+}
+#footerImage {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+    margin-top: 100px;
+}
+.submitBtn2 {
+    border-radius: 20px;
+    margin: 10px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
 
 .selection {
     
-   
+    background-color: #fffef7;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    font-size: 30px;
 } 
 
 
@@ -68,6 +97,7 @@
     width: 150px;
     height: 30px;
     padding-bottom:10px ;
+    font-size: 17px;
 }
 .player-checkbox {
     display: none;
@@ -75,24 +105,27 @@
 
 .player-checkbox-display {
     display: block;
-    background-color: orange;
+    background-color: #f07837;
     border: solid 1px black;
+    font-size: 30px;
 }
 .stat-selector {
     display: none;
+    
 }
 
 .stat-selector-show {
     display: block;
-    background-color: orange;
+    background-color: #f07837;
     border: solid 1px black;
+    font-size: 30px;
 }
 .submit-btn {
     border-radius: 20px;
     margin: 10px;
-    padding: 10px;
+    padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: orange;
+    background-color: #f07837;
 
 }
 .displayContainer {
@@ -106,5 +139,5 @@
     display: grid;
     grid-template-columns: auto;
    
-    background-color: orange;
+    background-color: #e3cbb6;
 }

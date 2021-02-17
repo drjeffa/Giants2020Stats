@@ -46,7 +46,7 @@ function showAtBats(){
         atBats.setAttribute('class', 'info');
         atBats.textContent = giants2020[item].atBats;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          }; 
         statContainer1.appendChild(statCard);
         statCard.appendChild(atBats);
@@ -65,7 +65,7 @@ function showAverage(){
         average.setAttribute('class', 'info');
         average.textContent = giants2020[item].ba;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer2.appendChild(statCard);
         statCard.appendChild(average);
@@ -82,7 +82,7 @@ function showHits(){
         hits.setAttribute('class', 'info');
         hits.textContent = giants2020[item].hits;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer3.appendChild(statCard);
         statCard.appendChild(hits);
@@ -100,7 +100,7 @@ function showBB(){
              bb.setAttribute('class', 'info');
              bb.textContent = giants2020[item].bb;
              if(giants2020[item].k ===0){
-                statCard.setAttribute('style','background-color:red;');      
+                statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
              };
              statContainer4.appendChild(statCard);
              statCard.appendChild(bb);
@@ -117,7 +117,7 @@ function showSO(){
             so.setAttribute('class', 'info');
             so.textContent = giants2020[item].so;
             if(giants2020[item].k ===0){
-                statCard.setAttribute('style','background-color:red;');      
+                statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
              };
             statContainer5.appendChild(statCard);
             statCard.appendChild(so);
@@ -136,7 +136,7 @@ function showHR(){
         hr.setAttribute('class', 'info');
         hr.textContent = giants2020[item].hr;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer6.appendChild(statCard);
         statCard.appendChild(hr);
@@ -154,7 +154,7 @@ function showRBI(){
             rbi.setAttribute('class', 'info');
             rbi.textContent = giants2020[item].rbi;
             if(giants2020[item].k ===0){
-                statCard.setAttribute('style','background-color:red;');      
+                statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
              };
             statContainer7.appendChild(statCard);
             statCard.appendChild(rbi);
@@ -171,7 +171,7 @@ function showPlateApp(){
         plateApp.setAttribute('class', 'info');
         plateApp.textContent = giants2020[item].plateApp;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer8.appendChild(statCard);
         statCard.appendChild(plateApp);       
@@ -188,7 +188,7 @@ function showOBP(){
         obp.setAttribute('class', 'info');
         obp.textContent = giants2020[item].obp;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer9.appendChild(statCard);
         statCard.appendChild(obp);
@@ -205,7 +205,7 @@ function showOPS(){
         ops.setAttribute('class', 'info');
         ops.textContent = giants2020[item].ops;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer10.appendChild(statCard);
         statCard.appendChild(ops);
@@ -222,7 +222,7 @@ function showOPSPlus(){
         opsPlus.setAttribute('class', 'info');
         opsPlus.textContent = giants2020[item].opsPlus;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer11.appendChild(statCard);
         statCard.appendChild(opsPlus);
@@ -239,7 +239,7 @@ function showSB(){
         sb.setAttribute('class', 'info');
         sb.textContent = giants2020[item].sb;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer12.appendChild(statCard);
         statCard.appendChild(sb);
@@ -256,7 +256,7 @@ function showCS(){
         cs.setAttribute('class', 'info');
         cs.textContent = giants2020[item].cs;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer13.appendChild(statCard);
         statCard.appendChild(cs);
@@ -273,7 +273,7 @@ function showDoubles(){
         doubles.setAttribute('class', 'info');
         doubles.textContent = giants2020[item].doubles;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer14.appendChild(statCard);
         statCard.appendChild(doubles);
@@ -290,7 +290,7 @@ function showTriples(){
         triples.setAttribute('class', 'info');
         triples.textContent = giants2020[item].triples;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837; text-align:center;');      
          };
         statContainer15.appendChild(statCard);
         statCard.appendChild(triples);
@@ -307,7 +307,7 @@ function showTotalBases(){
         totalBases.setAttribute('class', 'info');
         totalBases.textContent = giants2020[item].totalBases;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer16.appendChild(statCard);
         statCard.appendChild(totalBases);
@@ -324,7 +324,7 @@ function showSlugging(){
         slugging.setAttribute('class', 'info');
         slugging.textContent = giants2020[item].slugging;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer17.appendChild(statCard);
         statCard.appendChild(slugging);
@@ -341,7 +341,7 @@ function showRuns(){
         runs.setAttribute('class', 'info');
         runs.textContent = giants2020[item].runs;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer18.appendChild(statCard);
         statCard.appendChild(runs);
@@ -358,7 +358,7 @@ function showGames(){
         games.setAttribute('class', 'info');
         games.textContent = giants2020[item].games;
         if(giants2020[item].k ===0){
-            statCard.setAttribute('style','background-color:red;');      
+            statCard.setAttribute('style','background-color:#f07837;text-align:center;');      
          };
         statContainer19.appendChild(statCard);
         statCard.appendChild(games);
@@ -447,7 +447,7 @@ function handleCheckedPlayers(){
         name.setAttribute('class', 'name');
         name.textContent= player;
         if(giants2020[item].k ===0){
-           card.setAttribute('style','background-color:red;');      
+           card.setAttribute('style','background-color:#f07837; text-align:center;');      
         };
         card.appendChild(name); 
     })
